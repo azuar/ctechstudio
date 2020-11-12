@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CENTECH STUDIO</title>
+    <meta name="description" content="Photograpy App" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00897B" />
+</head>
+
+<body>
+    <!-- Navigasi -->
+    <nav class="orange lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo" id="logo-container">CTECH_STUDIO</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+
+    <!-- Artikel -->
+    <div class="container" id="body-content"></div>
+    <!-- Akhir Artikel -->
+
+    <!-- Footer -->
+    <footer class="page-footer blue lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CENTECH STUDIO</h5>
+                    <p class="grey-text text-lighten-4">Website Penyedia Jasa Yang Bergerak Dibidang Photograpy</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Sosial Media</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://www.instagram.com/centech_shoot/">Instagram
+                                Official</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/azuar04/">Instagram
+                                Photographer</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://generasianambasmaju.blogspot.com/">Blog
+                                Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <center> © 2020 Copyright - Centech_studio </center>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Akhir Footer -->
+
+    <!-- JS -->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <!-- REGISTER SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(function () {
+                        console.log("Pendaftaran ServiceWorker berhasil");
+                    })
+                    .catch(function () {
+                        console.log("Pendaftaran ServiceWorker gagal");
+                    });
+            });
+        } else {
+            console.log("ServiceWorker belum didukung browser ini.");
+        }
+    </script>
+    <!-- AKHIR REGISTER -->
+</body>
+
+</html>
